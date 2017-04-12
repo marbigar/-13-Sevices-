@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+<body>
+	
+	<div class="main" ng-controller="someCtrl">
+		<h3>{{hello}}</h3>
+		<p>I am {{year}} years old</p>
+	</div>
+	
+	<div ng-controller="secondCtrl">
+		<h2>{{hello}}</h2>
+		<ul>
+			<li ng-repeat="key in info">
+				{{key}}
+			</li>
+		</ul>
+		<input type="text" ng-model="hello">
+	</div>
+
+	<br><br><br><br><br>
+	
+	
+	<div ng-controller="textCtrl">
+		<input type="text" ng-model="textCopy">
+		<input type="button" value="copy" ng-click="copy()">
+	</div>
+
+	<div ng-controller="textPastCtrl">
+		<input type="text" ng-model="textPaste">
+		<input type="button" value="paste" ng-click="paste()">
+	</div>
+	
+	<script src="app/app.js"></script>
+	<script src="app/services/factory_service.js"></script>
+	<script src="app/controllers/some_controller.js"></script>
+	<script src="app/controllers/second_controller.js"></script>
+	<script src="app/controllers/text_controllers.js"></script>
+	<script src="app/controllers/text_past_controller.js"></script>
+	
+</body>
+</html>
